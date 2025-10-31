@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html class="light" lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>クラフト - AI画像生成スクール</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1919e6",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111121",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="sticky top-0 z-50 flex w-full justify-center border-b border-gray-200/50 dark:border-gray-700/50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center justify-between whitespace-nowrap px-4 sm:px-10 py-3 w-full max-w-6xl">
+<div class="flex items-center gap-2 sm:gap-4 text-gray-900 dark:text-white">
+<div class="size-6 sm:size-8 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-base sm:text-lg font-bold leading-tight tracking-[-0.015em] text-gray-900 dark:text-white">クラフト</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-sm font-medium leading-normal text-gray-800 dark:text-gray-300 hover:text-primary dark:hover:text-white" href="#problems">お悩み解決</a>
+<a class="text-sm font-medium leading-normal text-gray-800 dark:text-gray-300 hover:text-primary dark:hover:text-white" href="#gallery">作品ギャラリー</a>
+<a class="text-sm font-medium leading-normal text-gray-800 dark:text-gray-300 hover:text-primary dark:hover:text-white" href="#pricing">料金プラン</a>
+<a class="text-sm font-medium leading-normal text-gray-800 dark:text-gray-300 hover:text-primary dark:hover:text-white" href="#contact">お問い合わせ</a>
+</div>
+<a href="https://lin.ee/s2GDMUp" target="_blank" rel="noopener noreferrer" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
+<span class="truncate">今すぐ始める</span>
+</a>
+</div>
+</div>
+</header>
+<main class="flex flex-col items-center py-5 px-4 sm:px-10">
+<div class="layout-content-container flex flex-col max-w-6xl flex-1 w-full gap-12 sm:gap-16 md:gap-24">
+<section class="@container" id="hero">
+<div class="@[480px]:p-4">
+<div class="flex min-h-[500px] sm:min-h-[600px] flex-col gap-4 sm:gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-6 sm:p-8 text-center" data-alt="Abstract swirling colors of blue, purple, and gold, representing AI-generated art." style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDxSX3_92PoaSzdlICaW8z0KHEe_hcI6NOVY0hrRExY_0-XVYVr7wS9Eo0ITLviWASpab-TO0-wjr_1_EmPSIoOP31cS8OaNTgRNyf2QrAsWElHQmbt-f05hwS6FJ4npfAuTRhmX8DSIbruDFIOL1DuY6aSR9oPbahF-fsKatvuOeQRd-sxddcg4eW078VAEmdXuJTGTCa7eQgZazT21wtcCWFiU8Mr_zMq71NXM5XCqxf8WRujSRJc28vLYszWYMKPeIEjX_QmoSU");'>
+<div class="flex flex-col gap-3 sm:gap-4 max-w-3xl px-2">
+<h1 class="text-white text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-[-0.033em]">
+AI画像生成の悩み、<br/>クラフトが全て解決します
+</h1>
+<h2 class="text-gray-200 text-sm sm:text-base md:text-lg font-normal leading-normal">
+プロンプト作成から画像生成まで、プロが徹底サポート。<br class="hidden sm:block"/>理想の作品を確実に生み出せるようになります。
+</h2>
+</div>
+<div class="mt-4 sm:mt-8 flex flex-col items-center gap-4 sm:gap-6 w-full">
+<h3 class="text-white text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-none" style="font-family: 'Arial Black', 'Helvetica Bold', sans-serif; text-shadow: 0 2px 10px rgba(25, 25, 230, 0.5), 0 0 30px rgba(25, 25, 230, 0.3); word-break: keep-all;">
+Maker's
+</h3>
+<a href="https://lin.ee/s2GDMUp" target="_blank" rel="noopener noreferrer" class="flex w-full max-w-[280px] sm:max-w-[300px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 sm:h-14 px-6 sm:px-8 bg-white text-primary text-sm sm:text-base font-bold leading-normal tracking-[0.015em] hover:bg-gray-100 transition-colors shadow-lg">
+<span class="truncate">無料相談を始める</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<section class="flex flex-col gap-10 px-4 py-10 @container" id="problems">
+<div class="flex flex-col gap-4 text-center items-center">
+<h2 class="text-gray-900 dark:text-white tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl max-w-[720px]">
+                                こんなお悩みありませんか？
+                            </h2>
+<p class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal max-w-[720px]">
+                                AI画像生成でつまずいているあなたへ。クラフトが全ての問題を解決します。
+                            </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-0">
+<div class="flex flex-1 gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark p-6 flex-col">
+<span class="material-symbols-outlined text-primary text-3xl">sentiment_dissatisfied</span>
+<div class="flex flex-col gap-1">
+<h3 class="text-gray-900 dark:text-white text-lg font-bold leading-tight">生成結果がイマイチ</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">思い通りの画像が生成できない...プロのテクニックで品質を劇的に向上させます。</p>
+</div>
+</div>
+<div class="flex flex-1 gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark p-6 flex-col">
+<span class="material-symbols-outlined text-primary text-3xl">help</span>
+<div class="flex flex-col gap-1">
+<h3 class="text-gray-900 dark:text-white text-lg font-bold leading-tight">作り方がわからない</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">そもそもどうやって始めればいいの？基礎から丁寧に指導します。</p>
+</div>
+</div>
+<div class="flex flex-1 gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark p-6 flex-col">
+<span class="material-symbols-outlined text-primary text-3xl">psychology_alt</span>
+<div class="flex flex-col gap-1">
+<h3 class="text-gray-900 dark:text-white text-lg font-bold leading-tight">AIツール選びに迷う</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">どのAIツールを使えばいい？あなたの目的に最適なツールを提案します。</p>
+</div>
+</div>
+<div class="flex flex-1 gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark p-6 flex-col">
+<span class="material-symbols-outlined text-primary text-3xl">edit_note</span>
+<div class="flex flex-col gap-1">
+<h3 class="text-gray-900 dark:text-white text-lg font-bold leading-tight">プロンプト構築が難しい</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">無料配布のプロンプトではうまくいかない...効果的な書き方を習得できます。</p>
+</div>
+</div>
+<div class="flex flex-1 gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark p-6 flex-col">
+<span class="material-symbols-outlined text-primary text-3xl">palette</span>
+<div class="flex flex-col gap-1">
+<h3 class="text-gray-900 dark:text-white text-lg font-bold leading-tight">ファンアート制作</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">好きなキャラクターを再現したい！キャラクター再現のコツを伝授します。</p>
+</div>
+</div>
+<div class="flex flex-1 gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark p-6 flex-col">
+<span class="material-symbols-outlined text-primary text-3xl">view_in_ar</span>
+<div class="flex flex-col gap-1">
+<h3 class="text-gray-900 dark:text-white text-lg font-bold leading-tight">思い通りの構成ができない</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">構成の作り方がわからない...効果的な構図とレイアウトの技術を学べます。</p>
+</div>
+</div>
+<div class="flex flex-1 gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark p-6 flex-col">
+<span class="material-symbols-outlined text-primary text-3xl">forum</span>
+<div class="flex flex-col gap-1">
+<h3 class="text-gray-900 dark:text-white text-lg font-bold leading-tight">気軽に質問する環境がない</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">わからないことを聞ける場所がない...専門家にいつでも相談できる環境を提供します。</p>
+</div>
+</div>
+<div class="flex flex-1 gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark p-6 flex-col">
+<span class="material-symbols-outlined text-primary text-3xl">explore</span>
+<div class="flex flex-col gap-1">
+<h3 class="text-gray-900 dark:text-white text-lg font-bold leading-tight">作りたいジャンルがわからない</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">どんなものを作ればいいの？あなたの興味に合ったジャンル探しをサポートします。</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-center mt-8 p-8 rounded-xl bg-primary/10 dark:bg-primary/20">
+<h3 class="text-2xl font-bold text-primary dark:text-white mb-4">これらの問題を<br/>クラフトが全て解決します！</h3>
+<p class="text-gray-700 dark:text-gray-300 text-center max-w-2xl">専門講師による徹底サポートで、あなたも理想の画像を自在に生成できるようになります。</p>
+</div>
+</section>
+<section id="gallery">
+<h2 class="text-gray-900 dark:text-white text-xl sm:text-2xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 text-center">クラフトのポートフォリオ</h2>
+<p class="text-gray-600 dark:text-gray-400 text-sm sm:text-base text-center px-4 pb-4">多彩なスタイルとジャンルをご覧ください</p>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4 p-4">
+<div class="bg-cover bg-center flex flex-col rounded-lg justify-end p-4 aspect-[3/4] group overflow-hidden" data-alt="Geometric Japanese kimono art with autumn leaves" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%), url("https://page.gensparksite.com/v1/base64_upload/a7351c5c65781116ca7ae11e718296ee");'>
+<p class="text-white text-sm sm:text-base font-bold leading-tight w-full line-clamp-2 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">和風モダンアート</p>
+</div>
+<div class="bg-cover bg-center flex flex-col rounded-lg justify-end p-4 aspect-[3/4] group overflow-hidden" data-alt="Stylized anime character in white outfit" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%), url("https://page.gensparksite.com/v1/base64_upload/edab79708a6969eca95e2bdd122e8d3b");'>
+<p class="text-white text-sm sm:text-base font-bold leading-tight w-full line-clamp-2 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">アニメキャラクター</p>
+</div>
+<div class="bg-cover bg-center flex flex-col rounded-lg justify-end p-4 aspect-[3/4] group overflow-hidden" data-alt="Artistic portrait with warm lighting" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%), url("https://page.gensparksite.com/v1/base64_upload/1d305692ba5865f8959be5becca67177");'>
+<p class="text-white text-sm sm:text-base font-bold leading-tight w-full line-clamp-2 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">ドラマティックポートレート</p>
+</div>
+<div class="bg-cover bg-center flex flex-col rounded-lg justify-end p-4 aspect-[3/4] group overflow-hidden" data-alt="Retro pop art woman in kimono" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%), url("https://page.gensparksite.com/v1/base64_upload/58bd719183125a5ee4d7fd8aca8338ec");'>
+<p class="text-white text-sm sm:text-base font-bold leading-tight w-full line-clamp-2 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">レトロポップアート</p>
+</div>
+<div class="bg-cover bg-center flex flex-col rounded-lg justify-end p-4 aspect-[3/4] group overflow-hidden" data-alt="High contrast black and white portrait" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%), url("https://page.gensparksite.com/v1/base64_upload/69d3f08c464030e8e075c7841df828ee");'>
+<p class="text-white text-sm sm:text-base font-bold leading-tight w-full line-clamp-2 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">モノクローム表現</p>
+</div>
+<div class="bg-cover bg-center flex flex-col rounded-lg justify-end p-4 aspect-[3/4] group overflow-hidden" data-alt="Cute illustration with tiger and maid" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%), url("https://page.gensparksite.com/v1/base64_upload/f3b58d7c3c70be43c5211b4fbe109ac3");'>
+<p class="text-white text-sm sm:text-base font-bold leading-tight w-full line-clamp-2 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">かわいいイラスト</p>
+</div>
+<div class="bg-cover bg-center flex flex-col rounded-lg justify-end p-4 aspect-[3/4] group overflow-hidden" data-alt="Vibrant cyberpunk character art" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%), url("https://page.gensparksite.com/v1/base64_upload/8d38410b20a61d38acea78d26283a48b");'>
+<p class="text-white text-sm sm:text-base font-bold leading-tight w-full line-clamp-2 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">サイバーパンク</p>
+</div>
+<div class="bg-cover bg-center flex flex-col rounded-lg justify-end p-4 aspect-[3/4] group overflow-hidden" data-alt="Detailed samurai armor illustration" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%), url("https://page.gensparksite.com/v1/base64_upload/38de7b1bffccdaf3203d221648a63ddb");'>
+<p class="text-white text-sm sm:text-base font-bold leading-tight w-full line-clamp-2 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">サムライアーマー</p>
+</div>
+<div class="bg-cover bg-center flex flex-col rounded-lg justify-end p-4 aspect-[3/4] group overflow-hidden" data-alt="Minimalist figure illustration" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%), url("https://page.gensparksite.com/v1/base64_upload/66415bfb02ceb8818d8d33cccbdadf70");'>
+<p class="text-white text-sm sm:text-base font-bold leading-tight w-full line-clamp-2 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">ミニマルアート</p>
+</div>
+<div class="bg-cover bg-center flex flex-col rounded-lg justify-end p-4 aspect-[3/4] group overflow-hidden" data-alt="Anime schoolgirl minimalist art" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%), url("https://page.gensparksite.com/v1/base64_upload/e465024205a4c94b4c0b0649f701dd8f");'>
+<p class="text-white text-sm sm:text-base font-bold leading-tight w-full line-clamp-2 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">アニメ風イラスト</p>
+</div>
+</div>
+</section>
+<section class="px-4 py-10" id="testimonials">
+<div class="flex flex-col gap-4 text-center items-center mb-10">
+<h2 class="text-gray-900 dark:text-white text-[32px] font-bold leading-tight @[480px]:text-4xl max-w-[720px]">
+                                受講生の声
+                            </h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
+<div class="flex flex-col gap-4 p-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="text-primary font-bold text-lg">A</span>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white">Aさん</h4>
+</div>
+</div>
+<p class="text-gray-600 dark:text-gray-300">直接話せたのは良かったと思う。知らなかったことが知れたので良かったです。</p>
+</div>
+<div class="flex flex-col gap-4 p-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="text-primary font-bold text-lg">B</span>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white">Bさん</h4>
+</div>
+</div>
+<p class="text-gray-600 dark:text-gray-300 leading-relaxed">ツールに全く触れたことがないレベルの初心者には、画面共有で実際の操作画面を見ながら教えてもらえるのはとても助かると思いました。画像生成はchatGPTでちょっとやってたくらい、、、と言う人にはミッドジャーニーの初期操作や設定は挫折ポイントになりそうだと感じたので、その部分をフォローしてもらえたら、やってみたい！と思った熱量を失うことなく先に進めそうだなと思います。クラフトさんの人柄を知っているので、かなり初歩的なことを聞いたとしても呆れたりせず丁寧に教えてくれると信頼があります。自分で調べておけよ、、、レベルのこともきちんと教えてもらえたのがありがたかったです。他の方に気を使わずに参加できるという意味も込みでマンツーマン対応が良いかなと言う気持ちもあったのですが、他の方の質問から知ることもたくさんあるなと思ったので今回のような数人でのやり取りもいいなと感じました。</p>
+</div>
+</div>
+</section>
+<section class="px-4 py-10" id="pricing">
+<div class="flex flex-col gap-4 text-center items-center mb-10">
+<h2 class="text-gray-900 dark:text-white text-[32px] font-bold leading-tight @[480px]:text-4xl max-w-[720px]">
+                                料金プラン
+                            </h2>
+<p class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal max-w-[720px]">
+                                あなたの学習スタイルに合わせた柔軟なプランをご用意しています
+                            </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-start max-w-5xl mx-auto">
+<div class="flex flex-col gap-6 p-8 rounded-xl border-2 border-primary bg-white dark:bg-background-dark w-full relative overflow-hidden">
+<div class="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-4 py-1 rounded-bl-lg">おすすめ</div>
+<h3 class="text-xl font-bold text-primary dark:text-primary">メンバーシップ</h3>
+<p class="text-4xl font-bold text-gray-900 dark:text-white">¥1,000<span class="text-base font-normal text-gray-500 dark:text-gray-400">/月</span></p>
+<ul class="flex flex-col gap-3">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500">check_circle</span> <span>月1回コンサル料金が半額に</span></li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500">check_circle</span> <span>用途に合わせたsrefを提供</span></li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500">check_circle</span> <span>基礎講座の動画を配信</span></li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500">check_circle</span> <span>メンバー限定NOTE配信</span></li>
+</ul>
+<a href="https://lin.ee/s2GDMUp" target="_blank" rel="noopener noreferrer" class="mt-4 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
+メンバーになる
+</a>
+</div>
+<div class="flex flex-col gap-6 p-8 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark w-full">
+<h3 class="text-xl font-bold text-gray-900 dark:text-white">カスタムプロンプト作成</h3>
+<p class="text-4xl font-bold text-gray-900 dark:text-white">¥3,000<span class="text-base font-normal text-gray-500 dark:text-gray-400">〜</span></p>
+<ul class="flex flex-col gap-3">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500">check_circle</span> <span>あなた専用のプロンプトを作成</span></li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500">check_circle</span> <span>srefもプレゼント</span></li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500">check_circle</span> <span>目的に最適化した生成が可能に</span></li>
+</ul>
+</div>
+</div>
+<div class="mt-12 max-w-5xl mx-auto">
+<h3 class="text-2xl font-bold text-gray-900 dark:text-white text-center mb-8">コンサルティング</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+<div class="flex flex-col gap-4 p-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark">
+<div class="flex items-center justify-between">
+<h4 class="text-lg font-bold text-gray-900 dark:text-white">マンツーマンコンサル</h4>
+<span class="material-symbols-outlined text-primary text-2xl">person</span>
+</div>
+<div class="flex items-baseline gap-2">
+<p class="text-3xl font-bold text-gray-900 dark:text-white">¥3,000</p>
+<span class="text-gray-500 dark:text-gray-400 text-sm">/ 40分</span>
+</div>
+<p class="text-gray-600 dark:text-gray-400 text-sm">1対1の個別指導で、あなたの悩みを徹底サポート</p>
+</div>
+<div class="flex flex-col gap-4 p-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark">
+<div class="flex items-center justify-between">
+<h4 class="text-lg font-bold text-gray-900 dark:text-white">グループコンサル</h4>
+<span class="material-symbols-outlined text-primary text-2xl">groups</span>
+</div>
+<div class="flex items-baseline gap-2">
+<p class="text-3xl font-bold text-gray-900 dark:text-white">¥1,500</p>
+<span class="text-gray-500 dark:text-gray-400 text-sm">/ 1人</span>
+</div>
+<p class="text-gray-600 dark:text-gray-400 text-sm">3〜5名のグループで学び合いながらスキルアップ</p>
+</div>
+</div>
+<div class="mt-6 p-4 rounded-lg bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800">
+<p class="text-sm text-gray-700 dark:text-gray-300 text-center">
+<span class="material-symbols-outlined text-primary text-base align-middle mr-1">info</span>
+メンバーシップ会員は月1回のコンサルが半額でご利用いただけます
+</p>
+</div>
+</div>
+</section>
+<section class="px-4 py-10 rounded-xl bg-white dark:bg-background-dark border border-gray-200 dark:border-gray-800" id="contact">
+<div class="flex flex-col items-center text-center gap-8">
+<div class="flex flex-col gap-4 max-w-2xl">
+<h2 class="text-3xl font-bold text-gray-900 dark:text-white">今すぐ無料相談を始めよう</h2>
+<p class="text-gray-600 dark:text-gray-400">AI画像生成でお困りのことがあれば、まずは無料相談から。<br/>公式LINEで専門スタッフが丁寧にお答えします。</p>
+</div>
+<div class="flex flex-col gap-6 items-center">
+<a href="https://lin.ee/s2GDMUp" target="_blank" rel="noopener noreferrer" class="flex min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-[#00B900] text-white text-base font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
+<span class="truncate">LINE友達追加する</span>
+</a>
+</div>
+<div class="mt-8 p-6 rounded-lg bg-gray-50 dark:bg-gray-800 max-w-2xl">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white mb-3">無料相談で得られること</h3>
+<ul class="text-left space-y-2 text-gray-700 dark:text-gray-300">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-xl mt-0.5">check</span>
+<span>あなたの目的に合ったAIツールの提案</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-xl mt-0.5">check</span>
+<span>現在の作品へのプロからのアドバイス</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-xl mt-0.5">check</span>
+<span>最適な学習プランのご提案</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+</div>
+</main>
+<footer class="w-full flex justify-center border-t border-gray-200 dark:border-gray-800 mt-16">
+<div class="flex flex-col md:flex-row items-center justify-between gap-6 py-8 px-4 sm:px-10 w-full max-w-6xl">
+<p class="text-sm text-gray-500 dark:text-gray-400">© 2024 クラフト AI画像生成スクール. All rights reserved.</p>
+<div class="flex items-center gap-4 text-gray-900 dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-md font-bold leading-tight tracking-[-0.015em] text-gray-900 dark:text-white">クラフト</h2>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body>
+</html>
